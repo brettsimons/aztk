@@ -72,7 +72,7 @@ class SparkBaseOperations:
         return generate_application_task.generate_application_task(core_base_operations, container_id, application,
                                                                    remote)
 
-    def list_applications(self, id):
+    def _list_applications(self, core_base_operations, id):
         """Get information on a submitted application
 
         Args:
@@ -82,4 +82,4 @@ class SparkBaseOperations:
         Returns:
             :obj:`aztk.spark.models.Application`: object representing that state and output of an application
         """
-        return list_applications.list_applications(self, id)
+        return list_applications.list_applications(core_base_operations, id)
