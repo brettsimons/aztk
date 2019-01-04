@@ -73,13 +73,12 @@ class SparkBaseOperations:
                                                                    remote)
 
     def _list_applications(self, core_base_operations, id):
-        """Get information on a submitted application
+        """Get information on tasks submitted to a cluster
 
         Args:
-            id (:obj:`str`): the name of the job the application was submitted to
-            application_name (:obj:`str`): the name of the application to get
+            id (:obj:`str`): the name of the cluster the tasks belong to
 
         Returns:
-            :obj:`aztk.spark.models.Application`: object representing that state and output of an application
+            :obj:`[aztk.models.Task]`: list of aztk tasks
         """
         return list_applications.list_applications(core_base_operations, id)
