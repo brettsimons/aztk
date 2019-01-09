@@ -79,6 +79,6 @@ class SparkBaseOperations:
             id (:obj:`str`): the name of the cluster the tasks belong to
 
         Returns:
-            :obj:`[aztk.models.Task]`: list of aztk tasks
+            :obj:`[aztk.spark.models.Application]`: list of aztk applications
         """
         return list_applications.list_applications(core_base_operations, id)
